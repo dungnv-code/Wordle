@@ -59,10 +59,7 @@ const Square: React.FC<SquareProps> = ({ val, squareIdx }) => {
     return (
         <motion.div
             animate={val ? "filled" : "unfilled"}
-            variants={{
-                filled: { scale: [1, 1.2, 1] },
-                unfilled: { scale: 1, backgroundColor: "#d3d6da" },
-            }}
+            variants={variants}
             transition={{ duration: 0.3 }}
         >
             <div className={`square`} id={status}>{val}</div>
